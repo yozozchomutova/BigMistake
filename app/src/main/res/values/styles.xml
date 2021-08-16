@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Settings_Title">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:fontFamily">@font/font2</item>
+        <item name="android:textSize">28sp</item>
+    </style>
+
+    <style name="Settings_Description">
+        <item name="android:textColor">#AAAAAA</item>
+        <item name="android:fontFamily">@font/font2</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+</resources>

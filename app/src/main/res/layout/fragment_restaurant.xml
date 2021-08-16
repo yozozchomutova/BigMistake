@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#111111">
+
+
+    <ImageView
+        android:id="@+id/floor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/floor5" />
+
+    <ImageButton
+        android:id="@+id/enter_build_mode"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#00000000"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/buy" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/coin" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tiles"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/money_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="000"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintTop_toTopOf="@+id/imageView5" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/placable_tile_graph"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/build_mode_panel"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="#222222"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageButton
+            android:id="@+id/exit_build_mode"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="2dp"
+            android:background="#00000000"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@android:drawable/btn_dialog" />
+
+        <ImageView
+            android:id="@+id/tile_icon"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/exit_build_mode"
+            app:srcCompat="@drawable/air" />
+
+        <TextView
+            android:id="@+id/tile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tile"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tile_icon"
+            app:layout_constraintEnd_toEndOf="@+id/tile_icon"
+            app:layout_constraintStart_toStartOf="@+id/tile_icon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/item_left"
+            android:layout_width="32dp"
+            android:layout_height="48dp"
+            android:background="#00000000"
+            android:rotation="-90"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="@+id/tile_icon"
+            app:layout_constraintEnd_toStartOf="@+id/tile_icon"
+            app:layout_constraintTop_toTopOf="@+id/tile_icon"
+            app:srcCompat="@android:drawable/arrow_up_float" />
+
+        <ImageButton
+            android:id="@+id/item_right"
+            android:layout_width="32dp"
+            android:layout_height="48dp"
+            android:background="#00000000"
+            android:rotation="90"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="@+id/tile_icon"
+            app:layout_constraintStart_toEndOf="@+id/tile_icon"
+            app:layout_constraintTop_toTopOf="@+id/tile_icon"
+            app:srcCompat="@android:drawable/arrow_up_float" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@+id/tile_icon"
+            app:layout_constraintTop_toBottomOf="@+id/tile_icon"
+            app:srcCompat="@drawable/coin" />
+
+        <TextView
+            android:id="@+id/build_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="-000"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+            app:layout_constraintStart_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+        <ImageButton
+            android:id="@+id/tile_buy"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="#00000000"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tile_icon"
+            app:layout_constraintStart_toStartOf="@+id/tile_icon"
+            app:layout_constraintTop_toBottomOf="@+id/build_price"
+            app:srcCompat="@drawable/buy" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

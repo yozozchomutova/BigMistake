@@ -4,4 +4,63 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"/>
+    tools:context=".MainActivity">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/mainFragment"
+        android:name="net.jozoproductions.myapplication.fragments.CatchIngredientsFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainTabSelection" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/mainTabSelection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#111111"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tabIndicatorColor="#FF0000"
+        app:tabIndicatorGravity="top">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_catch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/icon" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_restaurant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/restaurant_icon" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_employees"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/employee1" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_upgrades"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/icon_upgrade" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/icon_settings" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/icon_menu" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

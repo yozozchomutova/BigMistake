@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#111111"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/storage_info"
+        style="@style/Settings_Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upgrades"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/storage_info">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView5"
+                style="@style/Settings_Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Restaurant"
+                android:textSize="20sp" />
+
+            <net.jozoproductions.myapplication.views.UpgradeView
+                android:id="@+id/catch_fall_speed"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <net.jozoproductions.myapplication.views.UpgradeView
+                android:id="@+id/catch_fall_cooldown"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/textView7"
+                style="@style/Settings_Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:text="Catching minigame"
+                android:textSize="20sp" />
+
+            <net.jozoproductions.myapplication.views.UpgradeView
+                android:id="@+id/rest_emp_movement_speed"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <net.jozoproductions.myapplication.views.UpgradeView
+                android:id="@+id/rest_emp_faster_cutting"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <net.jozoproductions.myapplication.views.UpgradeView
+                android:id="@+id/rest_emp_faster_cooking"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <net.jozoproductions.myapplication.views.UpgradeView
+                android:id="@+id/rest_more_storage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
